@@ -5,8 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dixi"
         mc:Ignorable="d"
-        Title="dixi" Height="200" Width="400">
-    <Grid>
+        Title="dixi" Height="150" Width="400">
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <TextBlock 
+        FontFamily="Century Gothic"
+        FontSize="12"
+        FontStretch="UltraExpanded"
+        FontStyle="Italic"
+        FontWeight="UltraBold"
+        
+        LineHeight="Auto"
+        Padding="8,8,8,8"
+        TextAlignment="Center"
+        TextWrapping="Wrap"
+        
+        Grid.Row="0" 
+        Grid.Column="0">Input Text File</TextBlock>
+
+        <TextBlock 
+        FontFamily="Century Gothic"
+        FontSize="12"
+        FontStretch="UltraExpanded"
+        FontStyle="Italic"
+        FontWeight="UltraBold"
+        
+        LineHeight="Auto"
+        Padding="8,8,8,8"
+        TextAlignment="Center"
+        TextWrapping="Wrap"
+        
+        Grid.Row="0" 
+        Grid.Column="1">Output Audio File</TextBlock>
 
     </Grid>
 </Window>
