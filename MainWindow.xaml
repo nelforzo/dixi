@@ -5,47 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dixi"
         mc:Ignorable="d"
-        Title="dixi" Height="150" Width="400">
-    <Grid ShowGridLines="True">
+        Title="dixi" Height="120" Width="400" Icon="/dixi_logo.png">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        
-        <TextBlock 
-        FontFamily="Century Gothic"
-        FontSize="12"
-        FontStretch="UltraExpanded"
-        FontStyle="Italic"
-        FontWeight="UltraBold"
-        
-        LineHeight="Auto"
-        Padding="8,8,8,8"
-        TextAlignment="Center"
-        TextWrapping="Wrap"
-        
-        Grid.Row="0" 
-        Grid.Column="0">Input Text File</TextBlock>
 
-        <TextBlock 
-        FontFamily="Century Gothic"
+        <TextBlock FontFamily="Consolas" FontSize="12" FontStyle="Normal"
+        Margin="8,8,8,8" TextAlignment="Center" TextWrapping="Wrap"
+        Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold">Step 1</TextBlock>
+
+        <TextBlock FontFamily="Consolas" FontSize="12" FontStyle="Normal"
+        Margin="8,8,8,8" TextAlignment="Center" TextWrapping="Wrap"
+        Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold">Step 2</TextBlock>
+
+        <TextBlock FontFamily="Consolas" FontSize="12" FontStyle="Normal"
+        Margin="8,8,8,8" TextAlignment="Center" TextWrapping="Wrap"
+        Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold">Step 3</TextBlock>
+
+        <Button Name="btn1" Background="#FF00C0FF" 
+        FontFamily="Consolas"
         FontSize="12"
-        FontStretch="UltraExpanded"
-        FontStyle="Italic"
-        FontWeight="UltraBold"
-        
-        LineHeight="Auto"
-        Padding="8,8,8,8"
-        TextAlignment="Center"
-        TextWrapping="Wrap"
-        
-        Grid.Row="0" 
-        Grid.Column="1">Output Audio File</TextBlock>
+        Grid.Row="1" Grid.Column="0"
+        ClickMode="Press" Margin="8,8,8,8" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="4,4,4,4" Click="btn1_Click">
+            Choose text
+        </Button>
+
+        <ComboBox HorizontalAlignment="Center" 
+        Grid.Row="1" Grid.Column="1" 
+        VerticalAlignment="Center" Width="120"/>
+
+        <Button Name="btn2" Background="#FF00C0FF" 
+        FontFamily="Consolas"
+        FontSize="12"
+        Grid.Row="1" Grid.Column="2"
+        ClickMode="Press" Margin="8,8,8,8" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="4,4,4,4" Click="btn2_Click">
+            Create mp3
+        </Button>
 
     </Grid>
 </Window>

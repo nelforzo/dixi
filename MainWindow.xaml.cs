@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,28 @@ namespace dixi
     /// </summary>
     public partial class MainWindow : Window
     {
+        String filename;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (openFileDialog.ShowDialog() == true)
+            {
+                filename = openFileDialog.FileName;
+            }
+        }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(filename);
         }
     }
 }
