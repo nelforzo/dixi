@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mWwvgpJwFFfpGE7HvwGRRZZG916brtpqBUk5+BAGhGVn1mOjH/y/W6SaxTnOu/3S6ASQvLBt4pDH0coceMVxJw==",
+  "dgSpecHash": "fav0G2NmMDNpi29AihITmUJZ2rRdptovy/jD5PE64YkBMptYuMYNE3cogSMSsoDGXxONKrCjw7j4SudkTZCTuQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\frank\\code\\dixi\\dixi.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\frank\\.nuget\\packages\\system.speech\\6.0.0\\system.speech.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dixi"
         mc:Ignorable="d"
-        Title="dixi" Height="120" Width="400" Icon="/dixi_logo.png">
+        Title="dixi" Height="120" Width="400" Loaded="Window_Loaded" Icon="/dixi_logo.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -38,7 +38,7 @@
             Choose text
         </Button>
 
-        <ComboBox HorizontalAlignment="Center" 
+        <ComboBox Name="combo1" HorizontalAlignment="Center" 
         Grid.Row="1" Grid.Column="1" 
         VerticalAlignment="Center" Width="120"/>
 

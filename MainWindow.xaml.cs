@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,11 +22,20 @@ namespace dixi
     /// </summary>
     public partial class MainWindow : Window
     {
-        String filename;
+        string? filename;
 
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            SpeechSynthesizer talker = new SpeechSynthesizer();
+            System.Collections.ObjectModel.ReadOnlyCollection<InstalledVoice> voices = talker.GetInstalledVoices();
+            foreach (InstalledVoice voice in voices)
+                combo1.Items.Add(voice.VoiceInfo.Name);
+
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
